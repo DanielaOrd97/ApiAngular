@@ -1,0 +1,164 @@
+label {
+  display: block;
+}
+
+#title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contenedor {
+  width: 100%;
+  margin: auto;
+  background-color: black;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+}
+
+ul li {
+  margin: 5px;
+  height: auto;
+  padding: 10px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+}
+
+ul li label {
+  margin-top: 5px;
+}
+
+ul li:hover {
+  z-index: 30;
+  transform: scale(1.1);
+  background-color: whitesmoke;
+  color: black;
+  transition: ease-in 0.1s;
+}
+
+ul li:hover .star {
+  color: #ffbf00;
+}
+
+#linkg {
+  width: auto;
+}
+
+#linkg i {
+  color: #0b60b0;
+}
+
+#link {
+  color: #3b3486;
+}
+
+#link::after {
+  color: blue;
+}
+
+#link::visited {
+  color: blue;
+}
+
+ul li:hover #link {
+  color: blue;
+  text-decoration: underline;
+}
+
+i {
+  color: red;
+}
+
+.star {
+  color: yellow;
+}
+
+img {
+  height: 180px;
+  width: 150px;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-left: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+}
+
+nav {
+  margin-right: 15px;
+}
+
+nav a {
+  margin-right: 30px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #a91d3a;
+  padding: 5px;
+  border-radius: 8px;
+  text-decoration: underline;
+}
+
+section {
+  display: flex;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.firstsection {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.firstsection i {
+  font-size: 50px;
+  color: white;
+  margin-left: 20px;
+}
+
+#btnedit {
+  border: 0;
+  visibility: hidden;
+}
+
+.buttons a {
+  background-color: #a91d3a;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}

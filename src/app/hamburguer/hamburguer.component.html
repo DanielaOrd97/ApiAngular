@@ -1,0 +1,57 @@
+<!-- <h2>HAMBURGUERS</h2> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<header>
+  <section class="firstsection">
+    <a href="#">
+      <i class="fa-solid fa-burger fa-beat"></i>
+    </a>
+    <h2>BURGUERS</h2>
+  </section>
+
+  <nav>
+    <a href="#">Menu</a>
+    <a routerLink="/add-burguer">Add New Hamburguer</a>
+  </nav>
+</header>
+<main>
+  <div class="contenedor">
+    <ul>
+      <li *ngFor="let item of data">
+        <section>
+          <i class="fa-solid fa-star star"></i>
+          <label id="title">{{ item.name }}</label>
+          <i class="fa-solid fa-star star"></i>
+        </section>
+
+        <section>
+          <i class="fa-solid fa-location-dot"></i>
+          <label>{{ item.restaurant }}</label>
+        </section>
+
+        <section id="linkg">
+          <i class="fa-solid fa-globe"></i>
+          <a id="link" href="{{ item.web }}" target="_blank">{{ item.web }}</a>
+        </section>
+
+        <label>{{ item.description }}</label>
+        <img
+          src="https://i.pinimg.com/originals/6a/27/ac/6a27ac5560df47ec8bb998051b74b1f0.png"
+        />
+
+        <div class="buttons">
+          <a
+            (click)="editBurguer(item.id)"
+            routerLink="/edit-burguer/{{ item.id }}"
+            >Edit</a
+          >
+          <a (click)="onDelete(item.id)">Delete</a>
+          <!-- <button (click)="onDelete(item.id)">Delete</button> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>

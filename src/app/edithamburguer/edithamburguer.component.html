@@ -1,0 +1,53 @@
+<!-- <div *ngIf="burguer" class="c">
+  <form #burguerForm="ngForm" (ngSubmit)="updateBurguerFormData()">
+    <label>Name of the burguer:</label>
+    <br />
+    <input type="text" name="name" [(ngModel)]="burguer.name" />
+    <br />
+    <label>Name of the restaurant:</label>
+    <br />
+    <input type="text" name="restaurant" [(ngModel)]="burguer.restaurant" />
+    <br />
+    <label>Description:</label>
+    <br />
+    <textarea name="description" [(ngModel)]="burguer.description"></textarea>
+    <br />
+    <div class="btns">
+      <button type="submit">Update burguer</button>
+      <a routerLink="/main">Cancel</a>
+    </div>
+  </form>
+</div> -->
+<div class="c">
+  <form [formGroup]="burguerForm" (ngSubmit)="onSubmit()">
+    <label>Name of the burger:</label>
+    <br />
+    <input type="text" formControlName="name" />
+    <br />
+    <label>Name of the restaurant:</label>
+    <br />
+    <input type="text" formControlName="restaurant" />
+    <br />
+    <label>Website:</label>
+    <br />
+    <input type="text" formControlName="web" />
+    <br />
+    <label>Description:</label>
+    <br />
+    <input type="text" formControlName="description" />
+    <br />
+    <label>Ingredients:</label>
+    <br />
+    <input type="text" [formControl]="ingredientControl" />
+    <button type="button" (click)="addIngredient()">Add Ingredient</button>
+    <br />
+    <ul>
+      <li *ngFor="let ingredient of ingredients">{{ ingredient }}</li>
+    </ul>
+    <br />
+    <div class="btns">
+      <button type="submit">Update burger</button>
+      <a routerLink="/main">Cancel</a>
+    </div>
+  </form>
+</div>

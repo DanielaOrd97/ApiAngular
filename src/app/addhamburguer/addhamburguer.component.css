@@ -1,0 +1,56 @@
+.c {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border: 2px solid white;
+  width: 50%;
+  border-radius: 5px;
+  margin: 3%;
+  padding: 2%;
+}
+
+label {
+  color: white;
+  font-size: 25px;
+}
+
+input {
+  margin-top: 2%;
+  font-size: 23px;
+  width: 99%;
+  margin-bottom: 3%;
+}
+
+textarea {
+  height: 100px;
+  width: 99%;
+  margin-bottom: 3%;
+  resize: none;
+}
+
+.btns {
+  width: 30%;
+  margin: auto;
+  padding-bottom: 7px;
+}
+
+button,
+a {
+  background-color: #a91d3a;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0px;
+}
+
+ul li {
+  color: white;
+}
